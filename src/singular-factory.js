@@ -1,9 +1,10 @@
 import functionName from './utils/function-name'
 import componentName from './utils/component-name'
+import initializeRefs from './utils/initialize-refs'
 import attachRefs from './utils/attach-refs'
 
 export default function singularFactory(component, name) {
-  component.refs = {}
+  initializeRefs(component)
   const ref = (c) => {
     if (!c) return
     attachRefs(component, name, c)
