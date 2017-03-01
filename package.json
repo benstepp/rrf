@@ -8,9 +8,16 @@
   ],
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "build": "npm run build:clean && npm run build:js",
+    "build:clean": "rimraf dist",
+    "build:js": "babel src --out-dir dist --source-maps inline --ignore test.js",
+    "prepublish": "npm run lint && npm run test && npm run build"
   },
-  "keywords": ["react", "refs"],
+  "keywords": [
+    "react",
+    "refs"
+  ],
   "author": "Benjamin Stepp <me@benstepp.com> (http://fightingdragonswithtaylorswift.com/)",
   "license": "MIT",
   "devDependencies": {
@@ -29,7 +36,8 @@
     "jest": "^19.0.2",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "rimraf": "^2.6.1"
   },
   "jest": {
     "testMatch": [
