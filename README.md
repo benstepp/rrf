@@ -5,9 +5,6 @@ react.js. Motivated by all sorts of copy paste refName in our react classes.
 You need the refs to do beautiful animations with GSAP, so might as well make
 it painless.
 
----
-
-## Installation
 
 ```
 yarn add rrf

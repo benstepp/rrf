@@ -1,5 +1,5 @@
 {
-  "name": "string-ref",
+  "name": "ref",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "lint": "eslint --ignore-path .gitignore .",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": ["react", "refs"],
   "author": "Benjamin Stepp <me@benstepp.com> (http://fightingdragonswithtaylorswift.com/)",
   "license": "MIT",
   "devDependencies": {
