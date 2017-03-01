@@ -5,9 +5,5 @@ export default function componentName(component) {
     return component.type.displayName || component.type.name || DEFAULT
   }
 
-  if (typeof component.constructor === 'function') {
-    return component.constructor.displayName || component.constructor.name || DEFAULT
-  }
-
-  return component.name || DEFAULT
+  return component.type || DEFAULT
 }

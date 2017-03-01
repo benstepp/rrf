@@ -8,8 +8,6 @@ export default function pluralFactory(component, name) {
   attachRefs(component, name, [])
 
   const ref = (c) => {
-    if (!c) return
-
     const included = component.refs[name].indexOf(c) > -1
     if (!included) component.refs[name].push(c)
   }
