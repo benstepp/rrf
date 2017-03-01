@@ -2,8 +2,17 @@
   "name": "rrf",
   "version": "1.0.1",
   "description": "React Refs made easy.",
+  "author": "Benjamin Stepp <me@benstepp.com> (http://fightingdragonswithtaylorswift.com/)",
   "website": "https://github.com/benstepp/rrf",
   "main": "dist/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benstepp/rrf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benstepp/rrf/issues"
+  },
   "files": [
     "dist"
   ],
@@ -19,8 +28,6 @@
     "react",
     "refs"
   ],
-  "author": "Benjamin Stepp <me@benstepp.com> (http://fightingdragonswithtaylorswift.com/)",
-  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-eslint": "^7.1.1",
