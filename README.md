@@ -1,4 +1,4 @@
-# easy-ref
+# rrf
 
 Refs in React, but easy. A dependency-less, replacement for string refs in
 react.js.
@@ -11,7 +11,7 @@ react.js.
 ### Installation
 
 ```
-yarn add easy-ref
+yarn add rrf
 ```
 
 ### Usage
@@ -20,7 +20,7 @@ yarn add easy-ref
 
 ```jsx
 import React, { Component } from 'react'
-import ref from 'easy-ref'
+import ref from 'rrf'
 
 export default class TheBest extends Component {
   componentDidMount() {
@@ -36,7 +36,32 @@ export default class TheBest extends Component {
 
 ```jsx
 import React, { Component } from 'react'
-import ref from 'easy-ref'
+import ref from 'rrf'
+
+export default class TheBest extends Component {
+  componentDidMount() {
+    console.log(this.refs.div) // div
+  }
+
+  render() {
+    return (
+      <div>
+        <Child reference={ref(this, 'div')}>
+      </div>
+    )
+  }
+}
+
+function Child({ reference }) {
+  return <div ref={reference} />
+}
+```
+
+#### Example of passing a ref to a child
+
+```jsx
+import React, { Component } from 'react'
+import ref from 'rrf'
 
 export default class TheBest extends Component {
   componentDidMount() {
