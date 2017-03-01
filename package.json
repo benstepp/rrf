@@ -1,6 +1,6 @@
 {
   "name": "rrf",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "React Refs made easy.",
   "url": "https://github.com/benstepp/rrf",
   "main": "dist/index.js",
