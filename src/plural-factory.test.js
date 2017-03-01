@@ -1,6 +1,8 @@
 import plural from './plural-factory'
 
-class Stub {}
+class Stub {
+  get type() { return this.constructor }
+}
 
 describe('pluralFactory', () => {
   it('retuns a function', () => {

@@ -1,6 +1,8 @@
 import singular from './singular-factory'
 
-class Stub {}
+class Stub {
+  get type() { return this.constructor }
+}
 
 describe('singularFactory', () => {
   it('retuns a function', () => {
