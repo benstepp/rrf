@@ -2,11 +2,18 @@ import componentName from './component-name'
 import React, { Component, PureComponent } from 'react'
 
 describe('componentName', () => {
-  it('returns the name of the class', () => {
+  it('returns the name of the component', () => {
     class ExtendsComponent extends Component {}
     const instance = <ExtendsComponent />
 
     expect(componentName(instance)).toBe('ExtendsComponent')
+  })
+
+  it('returns the name of the pure component', () => {
+    class ExtendsPureComponent extends PureComponent {}
+    const instance = <ExtendsPureComponent />
+
+    expect(componentName(instance)).toBe('ExtendsPureComponent')
   })
 
   it('uses displayName es6 get', () => {

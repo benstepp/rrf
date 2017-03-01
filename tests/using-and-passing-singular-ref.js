@@ -27,4 +27,29 @@ describe('Using and Passing Singular Refs', () => {
     expect(instance.refs.div.tagName).toBe('DIV')
     expect(instance.refs.child).toBeTruthy()
   })
+
+  it('works with pure components', () => {
+    class Test extends PureComponent {
+      render() {
+        return (
+          <div>
+            <div ref={ref(this, 'div')} />
+            <Child ref={ref(this, 'child')} />
+          </div>
+        )
+      }
+    }
+
+    class Child extends PureComponent {
+      render() {
+        return <div ref={this.props.reference} />
+      }
+    }
+
+    const wrapper = mount(<Test />)
+    const instance = wrapper.instance()
+    expect(instance.refs.div).toBeTruthy()
+    expect(instance.refs.div.tagName).toBe('DIV')
+    expect(instance.refs.child).toBeTruthy()
+  })
 })

@@ -5,7 +5,7 @@ class Stub {}
 describe('singularFactory', () => {
   it('retuns a function', () => {
     const instance = new Stub()
-    const ref = singular(instance, name)
+    const ref = singular(instance, 'name')
     expect(typeof ref).toBe('function')
   })
 

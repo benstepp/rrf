@@ -1,10 +1,9 @@
-const cache  = Symbol('cache')
+const cache = Symbol('cache')
 let internal = new WeakMap()
 
 export default class Cache {
-
   static get [cache]() {
-   return internal
+    return internal
   }
 
   static get(key) {
@@ -14,5 +13,4 @@ export default class Cache {
 
     return this[cache].get(key)
   }
-
 }

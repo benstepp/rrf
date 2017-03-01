@@ -5,7 +5,7 @@ class Stub {}
 describe('pluralFactory', () => {
   it('retuns a function', () => {
     const instance = new Stub()
-    const ref = plural(instance, name)
+    const ref = plural(instance, 'name')
     expect(typeof ref).toBe('function')
   })
 
