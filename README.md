@@ -40,31 +40,6 @@ import ref from 'rrf'
 
 export default class TheBest extends Component {
   componentDidMount() {
-    console.log(this.refs.div) // div
-  }
-
-  render() {
-    return (
-      <div>
-        <Child reference={ref(this, 'div')}>
-      </div>
-    )
-  }
-}
-
-function Child({ reference }) {
-  return <div ref={reference} />
-}
-```
-
-#### Example of passing a ref to a child
-
-```jsx
-import React, { Component } from 'react'
-import ref from 'rrf'
-
-export default class TheBest extends Component {
-  componentDidMount() {
     console.log(this.refs.divs) // [div, div, div, div]
   }
 
@@ -78,5 +53,30 @@ export default class TheBest extends Component {
       </div>
     )
   }
+}
+```
+
+#### Example of passing a ref to a child
+
+```jsx
+import React, { Component } from 'react'
+import ref from 'rrf'
+
+export default class TheBest extends Component {
+  componentDidMount() {
+    console.log(this.refs.div) // div
+  }
+
+  render() {
+    return (
+      <div>
+        <Child reference={ref(this, 'div')} />
+      </div>
+    )
+  }
+}
+
+function Child({ reference }) {
+  return <div ref={reference} />
 }
 ```
