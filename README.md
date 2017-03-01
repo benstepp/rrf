@@ -1,20 +1,34 @@
 # rrf
 
 Refs in React, but easy. A dependency-less, replacement for string refs in
-react.js.
+react.js. Motivated by all sorts of copy paste refName in our react classes.
+You need the refs to do beautiful animations with GSAP, so might as well make
+it painless.
 
-## Features
+---
 
-- regular references
-- plural references
-
-### Installation
+## Installation
 
 ```
 yarn add rrf
 ```
 
-### Usage
+---
+
+## Usage
+
+### API
+
+Create a ref by calling ref with a reference to this, and the name you want the
+ref to use. If the name ends with an 's' a plural reference will be created. A
+plural reference allows you to easily create an array of refs to similar
+objects.
+
+```jsx
+  ref(this, 'name')
+```
+
+### Examples
 
 #### Exmaple of a singular ref
 
