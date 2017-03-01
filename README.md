@@ -24,7 +24,7 @@ import ref from 'easy-ref'
 
 export default class TheBest extends Component {
   componentDidMount() {
-    console.log(this._refs.div) // div
+    console.log(this.refs.div) // div
   }
   render() {
     return <div ref={ref(this, 'div')} />
@@ -40,7 +40,7 @@ import ref from 'easy-ref'
 
 export default class TheBest extends Component {
   componentDidMount() {
-    console.log(this._refs.divs) // [div, div, div, div]
+    console.log(this.refs.divs) // [div, div, div, div]
   }
 
   render() {

@@ -1,11 +1,11 @@
 import cache from './cache'
-import refFactory from './ref-factory'
+import factory from './factory'
 
 export default function ref(component, name) {
   const functions = cache.get(component)
 
   if (!functions.hasOwnProperty(name)) {
-    const reference = refFactory(component, name)
+    const reference = factory(component, name)
     functions[name] = reference
   }
 
