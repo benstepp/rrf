@@ -1,0 +1,10 @@
+{
+  "extends": ["standard", "standard-react", "standard-jsx"],
+  "rules": {
+    "space-before-function-paren": [2, "never"],
+    "react/prop-types": [0]
+  },
+  "env": {
+    "jest": true
+  }
+}

@@ -3,6 +3,7 @@ import componentName from './utils/component-name'
 import attachRefs from './utils/attach-refs'
 
 export default function singularFactory(component, name) {
+  component.refs = {}
   const ref = (c) => {
     if (!c) return
     attachRefs(component, name, c)

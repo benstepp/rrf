@@ -2,8 +2,12 @@
   "name": "string-ref",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
     "test": "jest"
   },
   "keywords": [],
@@ -15,6 +19,12 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "enzyme": "^2.7.1",
+    "eslint": "^3.16.1",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-standard": "^2.0.1",
     "jest": "^19.0.2",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
