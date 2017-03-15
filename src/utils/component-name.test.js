@@ -48,4 +48,9 @@ describe('componentName', () => {
     const instance = <StatelessComponent />
     expect(componentName(instance)).toBe('DisplayName')
   })
+
+  it('falls back to component', () => {
+    const Nameless = (function() { return function() { return null } })()
+    expect(componentName(<Nameless />)).toBe('Component')
+  })
 })
