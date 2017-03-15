@@ -2,12 +2,10 @@ import cache from './cache'
 import factory from './factory'
 
 module.exports = function ref(component, name) {
-  const functions = cache.get(component)
-
-  if (!functions.hasOwnProperty(name)) {
+  if (!cache.has(component, name)) {
     const reference = factory(component, name)
-    functions[name] = reference
+    cache.set(component, name, reference)
   }
 
-  return functions[name]
+  return cache.get(component, name)
 }
