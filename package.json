@@ -23,7 +23,7 @@
     "build": "npm run build:clean && npm run build:js",
     "build:clean": "rimraf dist",
     "build:js": "babel src --out-dir dist --source-maps inline --ignore test.js",
-    "prepublish": "npm run lint && npm run test && npm run build"
+    "prepublish": "npm run test && npm run build"
   },
   "keywords": [
     "react",
