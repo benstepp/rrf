@@ -59,4 +59,32 @@ describe('Using Plural References', () => {
     expect(Array.isArray(instance.refs.divs)).toBe(true)
     expect(instance.refs.divs.length).toBe(1)
   })
+
+  it('does not add null to refs', () => {
+    class Div extends Component { render() { return <div /> } }
+
+    class Test extends Component {
+      state = { count: 2 }
+      render() {
+        let divs = []
+        for (let i = 0; i < this.state.count; i++) {
+          divs.push(<Div ref={ref(this, 'divs')} key={i} />)
+        }
+
+        return (
+          <div>
+            {divs}
+          </div>
+        )
+      }
+    }
+
+    const wrapper = mount(<Test />)
+    const instance = wrapper.instance()
+    expect(instance.refs.divs.length).toBe(2)
+    wrapper.setState({ count: 1 })
+    instance.refs.divs.forEach(div => {
+      expect(div).not.toBe(null)
+    })
+  })
 })
