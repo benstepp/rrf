@@ -1,4 +1,6 @@
-[![Travis CI Build Status](https://travis-ci.org/benstepp/rrf.svg?branch=master)](https://travis-ci.org/benstepp/rrf)
+[![Travis](https://travis-ci.org/benstepp/rrf.svg?branch=master)](https://travis-ci.org/benstepp/rrf)
+[![Coveralls](https://coveralls.io/repos/github/benstepp/rrf/badge.svg?branch=master)](https://coveralls.io/github/benstepp/rrf?branch=master)
+[![NPM](https://img.shields.io/npm/v/rrf.svg)](https://www.npmjs.com/package/rrf)
 
 # rrf
 
