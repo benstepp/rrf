@@ -1,5 +1,7 @@
 [![Travis](https://travis-ci.org/benstepp/rrf.svg?branch=master)](https://travis-ci.org/benstepp/rrf)
 [![Coveralls](https://coveralls.io/repos/github/benstepp/rrf/badge.svg?branch=master)](https://coveralls.io/github/benstepp/rrf?branch=master)
+[![CodeClimate](https://img.shields.io/codeclimate/github/benstepp/rrf.svg)](https://codeclimate.com/github/benstepp/rrf)
+[![David](https://img.shields.io/david/benstepp/rrf.svg)](https://david-dm.org/benstepp/rrf)
 [![NPM](https://img.shields.io/npm/v/rrf.svg)](https://www.npmjs.com/package/rrf)
 
 # rrf
