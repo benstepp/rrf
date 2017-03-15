@@ -17,8 +17,9 @@
     "dist"
   ],
   "scripts": {
+    "test": "npm run lint && npm run test:unit",
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "jest",
+    "test:unit": "jest",
     "build": "npm run build:clean && npm run build:js",
     "build:clean": "rimraf dist",
     "build:js": "babel src --out-dir dist --source-maps inline --ignore test.js",
