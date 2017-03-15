@@ -1,3 +1,5 @@
+[![Travis CI Build Status](https://travis-ci.org/benstepp/rrf.svg?branch=master)](https://travis-ci.org/benstepp/rrf)
+
 # rrf
 
 Refs in React, but easy. A dependency-less, replacement for string refs in
