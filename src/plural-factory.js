@@ -13,6 +13,9 @@ export default function pluralFactory(component, name) {
     if (!included) component.refs[name].push(c)
   }
 
-  functionName(ref, `plural_ref(${componentName(component)}, ${name})`)
+  if (process.env.NODE_ENV !== 'production') {
+    functionName(ref, `plural_ref(${componentName(component)}, ${name})`)
+  }
+
   return ref
 }

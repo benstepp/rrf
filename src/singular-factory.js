@@ -9,6 +9,9 @@ export default function singularFactory(component, name) {
     attachRefs(component, name, c)
   }
 
-  functionName(ref, `singular_ref(${componentName(component)}, ${name})`)
+  if (process.env.NODE_ENV !== 'production') {
+    functionName(ref, `singular_ref(${componentName(component)}, ${name})`)
+  }
+
   return ref
 }

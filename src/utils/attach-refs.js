@@ -1,5 +1,4 @@
 export default function attachRefs(component, name, value) {
-  if (component.refs[name]) return
-  const descriptor = { value }
+  const descriptor = { value, readonly: false, writable: true }
   Object.defineProperty(component.refs, name, descriptor)
 }

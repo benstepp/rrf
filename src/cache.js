@@ -1,28 +1,28 @@
 const cache = new WeakMap()
 
+const NULL_OBJECT = Object.create(null)
 const hasOwnProperty = (object, key) => Object.prototype.hasOwnProperty.call(object, key)
 
 export default class Cache {
   static has(instance, key) {
-    this.initialize(instance)
-    const functions = cache.get(instance)
+    const functions = cache.get(instance) || NULL_OBJECT
     return hasOwnProperty(functions, key)
   }
 
   static get(instance, key) {
-    this.initialize(instance)
-    const functions = cache.get(instance)
+    const functions = cache.get(instance) || NULL_OBJECT
     return functions[key]
   }
 
   static set(instance, key, value) {
-    this.initialize(instance)
-    const functions = cache.get(instance)
+    const functions = cache.get(instance) || this.initialize(instance)
     functions[key] = value
+    return value
   }
 
   static initialize(instance) {
-    if (cache.has(instance)) return
-    cache.set(instance, Object.create(null))
+    const functions = Object.create(null)
+    cache.set(instance, functions)
+    return functions
   }
 }

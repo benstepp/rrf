@@ -11,13 +11,6 @@ describe('pluralFactory', () => {
     expect(typeof ref).toBe('function')
   })
 
-  it('always creates a new function', () => {
-    const instance = new Stub()
-    const refA = plural(instance, 'name')
-    const refB = plural(instance, 'name')
-    expect(refA).not.toBe(refB)
-  })
-
   it('has plural in the function name', () => {
     const instance = new Stub()
     const ref = plural(instance, 'name')
